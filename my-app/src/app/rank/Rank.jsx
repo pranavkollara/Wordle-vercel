@@ -13,7 +13,7 @@ export default function Rank() {
       if (rank.current) return;
       rank.current = true;
       console.log("okay");
-      const response = await fetch(`http://localhost:5000/rank`);
+      const response = await fetch(`https://wordle-vercel-mocha.vercel.app/rank`);
       let value = await response.json();
       setData(value);
     }
