@@ -52,7 +52,7 @@ export default function Home({ user, name }) {
       wordFetch.current=true;
       try {
         const response = await fetch(
-          "https://random-word.ryanrk.com/api/en/word/random/?length=5"
+          "hhttps://random-word-api.herokuapp.com/word?length=5&lang=en"
         );
         const data = await response.json();
         setCorrectAnswer(data[0].toLowerCase());
