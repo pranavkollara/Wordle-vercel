@@ -11,7 +11,7 @@ export default function Win({word,guesses,user}) {
       if (addedwin.current) return;
       addedwin.current = true;
       console.log("okay");
-      const response = await fetch(`https://wordle-vercel-mocha.vercel.app/win/${user}`, {
+      const response = await fetch(`https://wordle-vercel-chi.vercel.app/win/${user}`, {
         method: "PATCH"
       });
     }

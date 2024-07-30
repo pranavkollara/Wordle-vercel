@@ -17,7 +17,7 @@ export default function Home({ user, name }) {
       if (addedtry.current) return;
       addedtry.current = true;
       console.log("okay");
-      const response = await fetch(`https://wordle-vercel-mocha.vercel.app/try/${user}`, {
+      const response = await fetch(`https://wordle-vercel-chi.vercel.app/try/${user}`, {
         method: "PATCH"
       });
     }
@@ -29,7 +29,7 @@ export default function Home({ user, name }) {
       if (userAddedRef.current) return; // Prevent running more than once
       userAddedRef.current = true;
       // console.log("okay");
-      const response = await fetch(`https://wordle-vercel-mocha.vercel.app/adduser/${user}`, {
+      const response = await fetch(`https://wordle-vercel-chi.vercel.app/adduser/${user}`, {
         method: "POST",
         headers: {
           Accept: "application/json",
