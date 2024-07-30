@@ -16,7 +16,7 @@ export default function Navbar() {
     <a className="btn btn-ghost text-xl">WordGame</a>
   </div>
   <div className="flex-none gap-2">
-  <Link href="/rank" className='link mx-2'>Rank</Link>
+  <Link href="/rank" className=' hover:link-hover text-2xl mx-2'>Rank</Link>
     <UserButton></UserButton>
   </div>
 </div>

@@ -62,47 +62,32 @@ app.patch("/try/:uid", async (req,res) => {
   }
 })
 
-function ssort(array){
-  for(let i=0;i<array.length-1;i++){
-    for(let j=i+1;j<array.length;j++){
-      if(array[i].win<array[j].win){let a = array[i];
-      let b = array[j];
-      array[i]=b;
-      array[j]=a;}
-    }
-  }
-}
+// function ssort(array){
+//   for(let i=0;i<array.length-1;i++){
+//     for(let j=i+1;j<array.length;j++){
+//       if(array[i].win<array[j].win){let a = array[i];
+//       let b = array[j];
+//       array[i]=b;
+//       array[j]=a;}
+//     }
+//   }
+// }
 
 app.get("/rank", async (req,res) => {
-  let data = await playerModel.find()
+  let data = await playerModel.find().sort({
+    win : -1
+  })
 
- 
+  // let player = []
+  // for(let i=0;i<data.length;i++){
+  //   player.push({
+  //     "name":data[i].name,
+  //     "win" : data[i].win,
+  //     "try" : data[i].try
+  //   })
+  // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  let player = []
-  for(let i=0;i<data.length;i++){
-    player.push({
-      "name":data[i].name,
-      "win" : data[i].win,
-      "try" : data[i].try
-    })
-  }
-  console.log(player);
-  console.log();
-  ssort(player)
-  console.log(player);
-  res.json(player)
+  console.log(data);
+  res.json(data)
 
 })

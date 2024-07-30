@@ -29,8 +29,11 @@ export default async function page() {
 
   return(
     <>
-
+    
    <Sign></Sign>
+   <div className=" w-full h-[91vh] flex justify-center">
+    <h1 className="text-2xl text-center my-auto">Please Sign in to Continue</h1>
+    </div>
     
     
     </>
